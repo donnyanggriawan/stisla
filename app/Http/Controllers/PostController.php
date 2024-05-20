@@ -58,7 +58,7 @@ class PostController extends Controller
     {
         $userId = Auth::id();
 
-        $posts = Post::where('user_id', $userId)->latest()->paginate(5);
+        $posts = Post::where('user_id', $userId)->latest()->paginate(2);
 
         return view('post.post', [
             'title' => 'Post',
